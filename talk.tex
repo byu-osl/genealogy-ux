@@ -1,0 +1,123 @@
+\documentclass[xcolor=svgnames,compress]{beamer}
+
+\newcommand{\blue}[1]{\textcolor{DarkBlue}{#1}}
+\newcommand{\white}[1]{\textcolor{White}{#1}}
+\newcommand{\gray}[1]{\textcolor{black!70}{#1}}
+\newcommand{\red}[1]{\textcolor{FireBrick}{#1}}
+\newcommand{\code}[1]{\textcolor{blue}{\texttt{#1}}}
+
+\newcommand{\separator}[1]{
+  {
+    \setbeamercolor{background canvas}{bg=LightSteelBlue}
+    \frame[plain]{
+      \begin{center}
+        \gray{\Huge \bf #1}
+      \end{center}
+    }
+  }
+}
+
+\newcommand{\divider}[1]{
+  {
+    \setbeamercolor{background canvas}{bg=Gold}
+    \frame[plain]{
+      \begin{center}
+        \gray{\Huge \bf #1}
+      \end{center}
+    }
+  }
+}
+
+
+\newcommand{\fig}[2]{\centerline{\includegraphics[height={#1}]{figures/{#2}}}}
+\newcommand{\figw}[2]{\centerline{\includegraphics[width={#1}]{figures/{#2}}}}
+\newcommand{\graph}[2]{\centerline{\includegraphics[height={#1}]{graphs/{#2}}}}
+\newcommand{\graphw}[2]{\centerline{\includegraphics[width={#1}]{graphs/{#2}}}}
+\newcommand{\headline}[1]{\centerline{\small \blue{#1}}}
+
+\usetheme{Frankfurt}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{mini frames}{}
+\setbeamercolor{section in head/foot}{bg=black!70}
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
+\setbeamercolor{title}{fg=white,bg=black!70,size=\huge,series=\bfseries}
+\setbeamercolor{frametitle}{fg=black!70,bg=white}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamertemplate{items}[circle]
+\setbeamercolor{itemize item}{fg=black!40}
+\setbeamercolor{button}{bg=black!70,fg=white}
+\setbeamertemplate{frametitle}[default][colsep=-4bp,rounded=false,shadow=false]
+
+\setbeamertemplate{headline}
+{%
+  \begin{beamercolorbox}[ht=3ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{section in head/foot}
+    \usebeamerfont{section in head/foot}\usebeamercolor[fg]{section in head/foot}%
+    \insertsectionnavigationhorizontal{0.95\textwidth}{}{}
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{\hfill{\hspace*{2em}\insertframenumber/\inserttotalframenumber\hspace*{2ex}\vskip0pt}}
+
+% PDF settings
+\hypersetup{%
+  pdftitle={User Experience in Genealogy},%
+  pdfauthor={Daniel Zappala},%
+  pdfsubject={},%
+  pdfkeywords={}%
+}
+
+\title{User Experience in Genealogy}
+\author{Daniel Zappala}
+\institute{Computer Science\\Brigham Young University}
+\date{\fig{1cm}{logo.png}}
+
+
+
+\begin{document}
+
+\frame[plain]{\titlepage}
+
+\section{}
+
+\separator{Current UX with Genealogy Apps}
+
+{
+  \setbeamercolor{background canvas}{bg=Gold}
+  \frame[plain]{
+    \figw{\textwidth}{space.png}
+  }
+}
+
+\frame[plain]{
+  \figw{1.2\textwidth}{familysearch.png}
+}
+
+\frame[plain]{
+  \figw{1.2\textwidth}{familytreebuilder.jpg}
+}
+
+\frame[plain]{
+  \figw{1.2\textwidth}{rootsmagic.png}
+}
+
+\separator{Finding Research Opportunities}
+
+\frame[plain]{
+  \figw{1.2\textwidth}{find-a-record.png}
+}
+
+\frame[plain]{
+  \figw{1.2\textwidth}{leaf.png}
+}
+
+\separator{Maintaining a Research Log}
+
+\frame[plain]{
+  \figw{1.2\textwidth}{researchties.png}
+}
+
+\separator{Thank you!\\\vspace{1cm}daniel.zappala@gmail.com\\\vspace{1cm}zappala.byu.edu}
+
+\end{document}
